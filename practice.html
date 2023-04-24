@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <style>
+      #main {
+        width: 50%;
+        height: 500px;
+        border: 1px solid black;
+        margin: 50px auto;
+        position: absolute;
+
+        /* background-image: url(images/apna2.jpg),url(images/apna1.jpg);
+            background-image: conic-gradient(red, yellow, green);
+            background-image: linear-gradient(red, yellow, blue );
+
+            background-image: radial-gradient(red, green, blue);
+            background-image: repeating-conic-gradient(red 10%, yellow 20%);
+
+            background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+
+            background-image: repeating-radial-gradient(red, yellow 10%, green 15%); */
+
+        background: red url(images/setting.png) no-repeat top left/5px 5px;
+
+        /* animation: mymove 5s infinite; */
+      }
+
+      #main2 {
+        width: 50%;
+        height: 500px;
+        margin: 50px auto;
+        position: absolute;
+        background-color: blueviolet;
+        border: 1px solid black;
+        /* animation: mymove 5s infinite; */
+      }
+
+      @keyframes mymove {
+        50% {
+          opacity: 0;
+        }
+        50% {
+          border: 15px solid lightblue;
+        }
+        from {
+          background-color: red;
+        }
+        to {
+          background-color: blue;
+        }
+        100% {
+          background: blue bottom right/2000px 2000px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main"></div>
+    <div id="main2"></div>
+  </body>
+</html>

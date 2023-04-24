@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Month", "Users"],
+          ["2", 40],
+          ["4", 45],
+          ["6", 52],
+          ["8", 30],
+          ["10", 20],
+          ["12", 0],
+          ["14", 0],
+          ["16", 0],
+          ["18", 0],
+          ["20", 0],
+          ["22", 0],
+          ["24", 0],
+          ["26", 0],
+          ["28", 0],
+          ["30", 0],
+        ]);
+
+        var data2 = google.visualization.arrayToDataTable([
+          ["Month", "Users"],
+          ["May", 50],
+          ["June", 400],
+          ["July", 550],
+          ["August", 850],
+        ]);
+
+        var data3 = google.visualization.arrayToDataTable([
+          ["Month", "Users"],
+          ["2", 40],
+          ["4", 45],
+          ["6", 52],
+          ["8", 30],
+          ["10", 20],
+          ["12", 0],
+          ["14", 0],
+          ["16", 0],
+          ["18", 0],
+          ["20", 0],
+          ["22", 0],
+          ["24", 0],
+          ["26", 0],
+          ["28", 0],
+          ["30", 0],
+        ]);
+
+        var options = {
+          title: "",
+          curveType: "function",
+          legend: { position: "bottom" },
+        };
+
+        // var options2 = {
+        //   title: '',
+        //   curveType: 'function',
+        //   legend: { position: 'bottom' }
+        // };
+
+        // var options3 = {
+        //   title: '',
+        //   curveType: 'function',
+        //   legend: { position: 'bottom' }
+        // };
+
+        var chart = new google.visualization.LineChart(
+          document.getElementById("curve_chart_daily")
+        );
+        var chart2 = new google.visualization.LineChart(
+          document.getElementById("curve_chart_monthly")
+        );
+        var chart3 = new google.visualization.LineChart(
+          document.getElementById("curve_chart_phone_verific")
+        );
+
+        chart.draw(data, options);
+        chart2.draw(data2, options);
+        chart3.draw(data3, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="sidebar">
+          <a href="#"
+            ><img
+              src="images/search1.png"
+              alt=""
+              style="width: 40px; height: 40px; border: radius 50%"
+            />
+          </a>
+          <a href="#"
+            ><img
+              src="images/save.png"
+              alt=""
+              style="width: 40px; height: 40px; border: radius 50%"
+            />
+          </a>
+          <a href="#"
+            ><img
+              src="images/send.png"
+              alt=""
+              style="width: 40px; height: 40px; border: radius 50%"
+            />
+          </a>
+          <a href="#"
+            ><img
+              src="images/setting.png"
+              alt=""
+              style="width: 40px; height: 40px; border: radius 50%"
+            />
+          </a>
+          <a href="#"
+            ><img
+              src="images/search.png"
+              alt=""
+              style="width: 40px; height: 40px; border: radius 50%"
+            />
+          </a>
+          <a href="#"
+            ><img
+              src="images/profile.png"
+              alt=""
+              style="width: 40px; height: 40px; border: radius 50%"
+            />
+          </a>
+          <a href="#"
+            ><img
+              src="images/plus.png"
+              alt=""
+              style="width: 40px; height: 40px; border: radius 50%"
+            />
+          </a>
+          <a href="#"
+            ><img
+              src="images/notif.png"
+              alt=""
+              style="width: 40px; height: 40px; border: radius 50%"
+            />
+          </a>
+        </div>
+      </aside>
+
+      <div class="first">
+        <div class="body_part">
+          <div class="header">
+            <div class="project">
+              <select name="project" id="">
+                <option value="1">Whoismybesty</option>
+                <option value="1">Besty</option>
+                <option value="1">Pwhbesty</option>
+                <option value="1">Notification</option>
+                <option value="1">Messanger</option>
+              </select>
+            </div>
+            <div class="user_info">
+              <a href="www.documentation.com">Go To Docs</a>
+              <img
+                src="images/notif.png"
+                alt=""
+                style="
+                  width: 40px;
+                  height: 40px;
+                  border: radius 50%;
+                  background: white;
+                "
+              />
+              <img
+                class="user_profile"
+                src="images/apna1.jpg"
+                alt=""
+                style="width: 50px; height: 50px; border-radius: 50%"
+              />
+            </div>
+          </div>
+
+          <h1 class="auth">Authentication</h1>
+          <div class="menubar">
+            <ul class="menubar_ul">
+              <li><a href="users.html">Users</a></li>
+              <li><a href="sign-in-methods.html">Sign-in-methods</a></li>
+              <li><a href="template.html">template</a></li>
+              <li><a class="active" href="index.html">usage</a></li>
+              <li><a href="setting.html">Setting</a></li>
+            </ul>
+          </div>
+          <hr />
+
+          <!-- daily_active_users_chart -->
+          <div class="daily_active_users_chart">
+            <div class="graph_title">
+              <h3>Daily active users</h3>
+              <div id="calendar">
+                <h4>
+                  current billing period <br />
+                  1sept - 1oct
+                </h4>
+                <input type="date" name="Billing Period" value="Period" />
+              </div>
+            </div>
+            <div class="curve_chart_daily"></div>
+          </div>
+
+          <div class="monthly_active_users_chart">
+            <div class="graph_title">
+              <h3>Monthly active users</h3>
+              <div id="calendar">
+                <h4>
+                  current billing period <br />
+                  1sept - 1oct
+                </h4>
+                <input type="date" name="Billing Period" value="Period" />
+              </div>
+            </div>
+            <div class="curve_chart_monthly"></div>
+          </div>
+
+          <div class="phone_verification_instance_chart">
+            <div class="graph_title">
+              <h3>Phone Verification Instance</h3>
+              <div id="calendar">
+                <h4>
+                  current billing period <br />
+                  1sept - 1oct
+                </h4>
+                <input type="date" name="Billing Period" value="Period" />
+              </div>
+            </div>
+            <div class="curve_chart_phone_verific"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

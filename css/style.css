@@ -1,0 +1,568 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #476282;
+    background-color: #f6f7f9;
+    
+}
+.container{
+    display: grid;
+    grid-template-columns: 100px auto;
+    margin: 0 auto;
+}
+aside{
+  
+    height: 100vh;
+
+}
+aside .sidebar{
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+aside .sidebar a{
+
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 400ms ease;
+}
+.sidebar a img{
+    transition: all 400ms ease;
+}
+.sidebar a:hover img{
+    cursor: pointer;
+
+    margin-left: 1rem;
+    color: bisque;
+} 
+
+.header{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.project{
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+  
+}
+.project option{
+    color: #476282;
+    font-weight: 500;
+   
+}
+.user_info{
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 0 0;
+    /* position: relative; */
+}
+.user_info img{
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    background: white;
+}
+.user_info a{
+    font-size: 1.2rem;
+    color: #476282;
+    text-decoration: none;
+    
+}
+.user_info .notif{
+    position: relative;
+}
+
+.user_info .notif::after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.auth{
+    color: #1b3a57;
+    font-size: 2rem;
+    margin-top: -5px;
+    /* font-family: sans-serif; */
+    font-weight: normal;
+    padding-left: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+hr{
+    margin-left: 1rem;
+}
+.menubar_ul{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    list-style-type: none;
+    padding-left: 1rem;
+    /* margin-left: -40px; */
+
+}
+.menubar_ul li{
+    padding-right: 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.menubar_ul li a{
+   text-decoration: none;
+   color: #476282;
+}
+
+.menubar_ul li a:hover,
+.menubar_ul li a.active{
+
+    color: #088178;
+
+}
+
+.menubar_ul li a.active::after,
+.menubar_ul li a:hover::after {
+    content: "";
+     width: 70%;
+     height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -12.5px; 
+    left: 2px; 
+   
+}
+hr{
+    margin-top: -7px;
+}
+
+/*  ================  usage  ========================= */
+
+.daily_active_users_chart,
+.monthly_active_users_chart,
+.phone_verification_instance_chart{
+
+    width: 90%;
+    margin: 20px auto;
+}
+.graph_title{
+    display: flex;
+    justify-content: space-between;
+    /* width: 90%;
+    margin: 20px auto ; */
+    padding: 0;
+    align-items: baseline;
+
+
+    
+}
+#calendar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    text-align: start;
+
+}
+#calendar input{
+   
+    outline: none;
+
+}
+.curve_chart_daily,
+.curve_chart_monthly,
+.curve_chart_phone_verific{
+    border: 1px solid #1b3a57;
+    width: 100%;
+    height: 300px;
+   
+}
+
+/* /////////////////////////////    USERS      /////////////////////////////////// */
+
+.table_data{
+    width: 90%;
+    margin: 30px auto;
+    text-align: center;
+}
+.table_data table{
+    width: 100%;
+    padding: 10px 0;
+    border-collapse: collapse;
+   
+}
+.table_data .user_table .identifier{
+    width: fit-content;
+}
+.table_data .user_table .provided{
+    width: fit-content;
+}
+.table_data .user_table .created{
+    width: fit-content;
+}
+.table_data .user_table .signin{
+    width: fit-content;
+}
+.table_data .user_table .useruid{
+    width: fit-content;
+}
+.table_search{
+    background-color:#476282e7;
+    border-radius: 10px;
+    color: white;
+}
+
+
+.table_data table .col_search{
+    width: 60%;
+}
+
+.table_data table .col_search input{
+    width: 100%;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 25px;
+}
+.table_data table .add_user_btn{
+    width: 20%;
+}
+
+.table_data table .add_user_btn a{
+    width: 100%;
+    background-color:#051e34;
+    padding: 10px 50px;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+ 
+}
+th, td{
+    padding: 15px;
+    border-left: none;
+    border-right: none;
+}
+
+.table_search .refresh_iocn, 
+.table_search .dot_icon{
+    width: 10%;
+}
+
+
+/* /////////////////////////////////////////////////////////////////////// */
+
+#quota_limit{
+    width: 80%;
+    margin: 30px auto;
+    background-color: rgba(214, 102, 17, 0.2);
+    padding: 10px 20px;
+    color: rgba(219, 36, 36, 0.913);
+    font-weight: normal;
+}
+.sign_in_method{
+    width: 83%;
+    margin: 0 auto;
+
+   
+}
+.sign_in_providers{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow:  5px 5px 12px rgba(0, 0, 0, 0.16);
+    
+}
+#add_new_provider{
+    text-align: right;
+}
+
+.sign_in_method a{
+    background-color:#051e34;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+   
+}
+
+/* //////////////////////////////////////////////////////// */
+.advanced{
+   
+    width: 83%;
+    margin: 40px auto;
+
+    
+}
+
+.advanced_div{
+   font-size: medium;
+    padding: 20px;
+    border-radius: 10px;
+    /* background-color: #ecf0f3; */
+    background-color: white;
+
+    box-shadow:  5px 5px 12px rgba(0, 0, 0, 0.16);
+    /* box-shadow:  -5px -5px 12px #ffffff,  5px 5px 12px rgba(0, 0, 0, 0.16); */
+}
+
+
+/* /////////////////////////  template   ////////////////////////// */
+
+.template_title{
+    width: 83%;
+    margin: 40px auto 10px auto;
+}
+
+.template{
+
+    width: 83%;
+    margin: 10px auto 50px auto;
+    display: flex;
+    /* box-shadow:  10px 10px 12px rgba(0, 0, 0, 0.16); */
+    box-shadow: inset 5px 5px 12px #ffffff, 5px 5px 12px rgba(0, 0, 0, 0.16);
+
+}
+
+.template .template_table .template_right_col{
+    display: none;
+}
+.template_right{
+    width: 60%;
+}
+.template_right_header{
+    border: 1px solid gray;
+    padding: 15px 20px;
+  
+
+}
+
+.template_right_footer table{
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: none;
+    border-top: none;
+}
+.template_right_footer table td{
+    color: black;
+}
+.template_right_footer table label{
+    color: #476282;
+}
+.template_list ul{
+    border: 1px solid gray;
+
+}
+.template_table{
+    width: 40%;
+    text-align: left;
+    border-collapse: collapse;
+    background-color:  rgba(0, 0, 0, 0.16);
+}
+.template_table tr{
+    border-bottom: none;
+}
+/* /////////////////////////////////////////////////////////// */
+.setting_right_footer{
+    padding: 20px;
+}
+
+
+/* ========== media query for tablet ======== */
+
+@media screen and (max-width: 1166px){
+
+    /* ====================  users  ============== */
+
+    .container{
+        
+        grid-template-columns: 80px auto;
+        
+    }
+    
+    .table_data table .col_search input{
+
+        font-size: 18px;
+    }
+    .table_data table .add_user_btn{
+        width: 20%;
+    }
+    
+    .table_data table .add_user_btn a{
+        padding: 10px;
+     
+    }
+    
+    
+} 
+ 
+/* =================  mobile devices -1  =================== */
+
+@media screen and (max-width: 865px){
+
+   
+
+     /* ====================  users  ============== */
+
+     .container{
+        
+        grid-template-columns: 70px auto;
+        
+    }
+
+    .table_data table .col_search{
+        width: 70%;
+     }
+
+   .table_data table .col_search input{
+         font-size: 0.8rem;
+    }
+
+    .table_data .user_table .provider{
+        display: none;
+    }
+   
+    .table_data table .add_user_btn a{
+      
+        padding: 10px 5px;
+       
+    }
+  
+
+}
+
+
+@media screen and (max-width: 756px){
+
+
+    .header{
+        margin-top: 2rem;
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+
+    .header .user_info{
+        margin-right: 5px;
+        
+        justify-content: flex-end;
+        padding: 10px 10px 0 0;
+    }
+     /* ====================  users  ============== */
+
+    .table_data .user_table .provider,
+    .table_data .user_table .created,
+    .table_data table .add_user_btn{
+        display: none;
+    }
+
+    .table_data table .col_search{
+        width: 85%;
+   }
+
+
+   /* ===================== template  ===================== */
+
+   .template .template_table{
+    position: relative;
+    width: 100%;
+
+   }
+   .template_right{
+    display: none;
+
+   }
+
+   /* .template .template_table tbody{
+    position: relative;
+   }
+   .temp_row{
+    position: relative;
+    
+   } */
+   .temp_row .temp_right_below_row{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+   }
+
+   .template .template_table .template_right_col{
+        display: block;
+     
+        border: none;
+    
+        margin-top: 0.8rem;
+        
+    }
+
+}
+
+
+/* =================  mobile devices -2  =================== */
+
+@media screen and (max-width: 600px){
+
+    /* ====================  users  ============== */
+
+    .menubar .menubar_ul{
+        font-size: 1rem;
+    }
+    .container{
+        
+        grid-template-columns: 60px auto;
+        
+    }
+
+    .table_data .table_search{
+        text-align: left;
+    }
+
+    .table_data .user_table .identifier{
+        font-size: 0.7rem;
+        padding-left: 2px;
+        padding-right: 0;
+    }
+
+   .table_data .user_table .provider,
+   .table_data .user_table .created,
+   /* .table_data .user_table .useruid, */
+   .table_data .user_table .signin,
+   .table_data table .add_user_btn,
+   .table_data table .refresh_icon{
+       display: none;
+   }
+  
+
+   .table_data table .col_search{
+         width: 95%;
+         padding-left: 2px;
+         padding-right: 2px;
+    }
+
+   .table_data table .col_search input{
+        font-size: 0.8rem;
+    }
+    .table_data .user_table .useruid{
+        font-size: 0.6rem;
+    }
+
+   
+}
+
